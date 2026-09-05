@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- Encabezado -->
+            <header class="header">
+                <h1>✓ Mi Lista de Tareas</h1>
+                <p class="subtitle">Organiza tus tareas y sé productivo</p>
+            </header>
+
+            <!-- Barra de entrada -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="Escribe una tarea y presiona Enter..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">+ Agregar</button>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="active">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Total:</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Completadas:</span>
+                    <span class="stat-value" id="completedCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Pendientes:</span>
+                    <span class="stat-value" id="activeCount">0</span>
+                </div>
+            </div>
+
+            <!-- Lista de tareas -->
+            <div class="todo-list" id="todoList">
+                <!-- Las tareas se generarán aquí -->
+            </div>
+
+            <!-- Mensaje vacío -->
+            <div class="empty-state" id="emptyState">
+                <p class="empty-icon">📝</p>
+                <p class="empty-text">No hay tareas. ¡Agrega una nueva!</p>
+            </div>
+
+            <!-- Botones de control -->
+            <div class="controls">
+                <button id="clearCompletedBtn" class="control-btn clear-btn">🗑️ Limpiar Completadas</button>
+                <button id="clearAllBtn" class="control-btn delete-all-btn">🔄 Limpiar Todo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
